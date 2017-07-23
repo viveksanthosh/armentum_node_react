@@ -3,8 +3,9 @@ const express = require('express'),
     newsArticleRoutes = require('./routes/newsArticles'),
     app = express();
 
+
+app.use('/', express.static('ui/build'));
 app.use(newsArticleRoutes);
-app.use(express.static('/', 'ui/public'))
 
 isConnected.then(() => {
     app.listen(3001, () => {
