@@ -1,4 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './routes';
-ReactDOM.render(App, document.getElementById('root'));
+import Routes from './routes';
+import configureStore from './store';
+import { Provider } from 'react-redux';
+const store = configureStore();
+ReactDOM.render(<Provider store={store}>{Routes}</Provider>, document.getElementById('root'));
