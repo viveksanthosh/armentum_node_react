@@ -1,10 +1,9 @@
 const mongodb = require('mongodb'),
   mongoClient = mongodb.MongoClient;
 
-mongoClient.connect();
-
 let db, isConnected = new Promise((resolve, reject) => {
   mongoClient.connect('mongodb://newsFeed:news123@ds035036.mlab.com:35036/vivek-test', (err, dbInstance) => {
+
     if (err) {
       reject(err);
     } else {
