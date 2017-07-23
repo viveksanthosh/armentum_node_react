@@ -8,7 +8,8 @@ export default (
         <Layout>
             <Switch>
                 <Route path="/latest" component={NewsArticlePage} />
-                <Redirect from="/" to="/latest" />
+                <Route path="/popular" component={NewsArticlePage} />
+                <Redirect from="*" to="/latest" />
             </Switch>
         </Layout>
     </BrowserRouter>

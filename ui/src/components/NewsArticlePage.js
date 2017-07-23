@@ -13,16 +13,12 @@ class NewsArticlePage extends React.Component {
         }
     }
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
-                console.log(this.props)
-
         if (nextProps.location.pathname !== this.props.location.pathname) {
             this.props.dispatch(actions.getNewsArticles(nextProps.location.pathname));
         }
     }
 
     render() {
-        console.log(this.props.articles)
         const articles = this.props.articles;
         return (
             <div>
