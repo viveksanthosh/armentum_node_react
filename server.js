@@ -4,9 +4,10 @@ const express = require('express'),
     app = express();
 
 app.use(newsArticleRoutes);
+app.use(express.static('/', 'ui/public'))
 
 isConnected.then(() => {
-    app.listen(3000, () => {
+    app.listen(3001, () => {
         console.log('server started');
     })
 }).catch(err => {
