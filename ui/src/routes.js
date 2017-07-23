@@ -1,12 +1,16 @@
+import React from 'react';
 import Layout from './components/Layout';
-import Layout from './components/NewsArticlePage';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NewsArticlePage from './components/NewsArticlePage';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 export default (
-<Layout>
-    <Switch>
-            <Route path="/latest" render={NewsArticlePage}/>
-            <Redirect from="/invoices" to="/invoices/dashboard"/>
-          </Switch>
-</Layout>
+    < BrowserRouter>
+        <Layout>
+            <Switch>
+                <Route path="/latest" render={NewsArticlePage} />
+                <Redirect from="/" to="/latest" />
+            </Switch>
+        </Layout>
+    </BrowserRouter>
+
 )
