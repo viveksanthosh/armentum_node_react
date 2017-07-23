@@ -7,7 +7,7 @@ export default ({ links }) => (
       <a className="navbar-brand" href="#"></a>
     </div>
     <ul className="nav navbar-nav">
-     {links.map(link =>  <li><a href={'/'+link}>{link}</a></li>)}
+     {links.map(link =>  <li key = {link}><a href={'/'+link}>{link}</a></li>)}
     </ul>
   </div>
 </nav>

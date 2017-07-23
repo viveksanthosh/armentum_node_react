@@ -7,7 +7,7 @@ export default (
     < BrowserRouter>
         <Layout>
             <Switch>
-                <Route path="/latest" render={NewsArticlePage} />
+                <Route path="/latest" component={NewsArticlePage} />
                 <Redirect from="/" to="/latest" />
             </Switch>
         </Layout>
