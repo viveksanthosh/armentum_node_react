@@ -1,5 +1,5 @@
 const express = require('express'),
-    isConnected = require('./mongodb').isConnected;
+    isConnected = require('./database/mongodb').isConnected;
 app = express();
 
 isConnected.then(() => {
